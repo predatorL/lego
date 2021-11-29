@@ -49,7 +49,6 @@ function configureWebpack(webpackConfig, {env, paths}) {
             htmlWebpackPlugins.push(mkHtmlWebpackPlugin([fileName], fileName + ".html", template));
         }
     });
-
     //main为create-react-app默认创建的入口，保留下来。这样既可以实现原始的单入口，又可以实现多入口
     webpackConfig.entry = {
         main: webpackConfig.entry,
@@ -94,17 +93,7 @@ module.exports = {
             'components': resolve("src/components"),
             'common': resolve("src/common"),
         },
-        configure: configureWebpack,
-        plugins: [
-            {
-                plugin: CracoLessPlugin,
-                options: {
-                    cssLoaderOptions: {
-                        modules: { localIdentName: "[local]_[hash:base64:5]" },
-                    }
-                }
-            }
-        ]
+        // configure: configureWebpack,
     }
 };
 
