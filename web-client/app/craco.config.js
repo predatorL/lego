@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const resolve = dir => path.resolve(__dirname, dir);
+const resolve = dir => path.join(__dirname, dir);
 const CracoLessPlugin = require('craco-less');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
@@ -90,8 +90,9 @@ module.exports = {
     webpack: {
         alias: {
             '@': resolve("src"),
-            'components': resolve("src/components"),
-            'common': resolve("src/common"),
+            '@entries': resolve("src/entries"),
+            '@components': resolve("src/components"),
+            '@common': resolve("src/common"),
         },
         // configure: configureWebpack,
     }
