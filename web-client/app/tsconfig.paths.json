@@ -2,18 +2,18 @@
     "compilerOptions": {
         "baseUrl": "./src",
         "paths": {
-            "@": [
-                "src"
+            "@root/*": [
+                "./*"
             ],
-            "@entries": [
-                "src/entries"
+            "@entries/*": [
+                "./entries/*"
             ],
-            "@components": [
-                "src/components"
+            "@components/*": [
+                "./components/*"
             ],
-            "@common": [
-                "src/common"
-            ],
+            "@common/*": [
+                "./common/*"
+            ]
         }
     }
 }

@@ -2,13 +2,13 @@ import React from 'react';
 
 function Page() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="Entry">
+      <header className="Entry-header">
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/Entry.tsx</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          className="Entry-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
