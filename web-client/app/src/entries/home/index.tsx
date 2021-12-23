@@ -1,23 +1,23 @@
 import React from 'react';
+import { Route, Link } from "react-router-dom";
 
-function Page() {
+function Entry() {
   return (
-    <div className="Entry">
-      <header className="Entry-header">
-        <p>
-          Edit <code>src/Entry.tsx</code> and save to reload.
-        </p>
-        <a
-          className="Entry-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Link to="/english">
+        英语
+      </Link>
+      <Link to="/chemistry">
+        化学
+      </Link>
+      <Link to="/math">
+        数学
+      </Link>
+      <Link to="/chinese">
+        语文
+      </Link>
+    </>
   );
 }
 
-export default Page;
+export default Entry;

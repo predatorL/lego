@@ -1,16 +1,17 @@
 import React from 'react';
+import { Route, Routes } from "react-router-dom";
+// views
+import Home from './views/home';
+import Translate from './views/translate';
 
 function Entry() {
   return (
-    <div className="Entry">
-      <ul>
-        <li>中英互译</li>
-        <li>听写</li>
-        <li>遣词造句</li>
-        <li>完形填空</li>
-        <li>阅读理解</li>
-      </ul>
-    </div>
+    <Routes>
+    <Route path="/english">
+      <Route path="" element={<Home />} />
+      <Route path="/english/translate" element={<Translate />} />
+    </Route>
+    </Routes>
   );
 }
 
