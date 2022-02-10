@@ -1,14 +1,37 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+import {RoutesConf} from '@entries/english';
 
-function View() {
+const Entrys = [
+  {
+    label: '中英互译',
+    path: '/translate'
+  },
+  {
+    label: '听写',
+    path: '/dictation'
+  },
+  {
+    label: '遣词造句',
+    path: '/phrasing'
+  },
+  {
+    label: '完形填空',
+    path: '/gapFilling'
+  },
+  {
+    label: '阅读理解',
+    path: '/readingComprehension'
+  },
+]
+
+function View(): JSX.Element {
   return (
     <div className="Entry">
       <ul>
-        <li>中英互译</li>
-        <li>听写</li>
-        <li>遣词造句</li>
-        <li>完形填空</li>
-        <li>阅读理解</li>
+        {
+          Entrys.map((item, i) => <li key={i}><Link to={`${RoutesConf.path}${item.path}`}>{item.label}</Link></li>)
+        }
       </ul>
     </div>
   );

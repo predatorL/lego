@@ -1,17 +1,33 @@
 import React from 'react';
-import { Route, Routes } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+// utils
+import {TRouteConf} from '@common/types';
 // views
 import Home from './views/home';
 import Translate from './views/translate';
 
+export const RoutesConf: TRouteConf = {
+  path: '/english',
+  name: 'english',
+  label: '英语',
+  children: [
+    {
+      path: '/',
+      element: Home
+    },
+    {
+      path: '/translate',
+      element: Translate
+    }
+  ]
+}
+  
 function Entry() {
   return (
-    <Routes>
-    <Route path="/english">
-      <Route path="" element={<Home />} />
-      <Route path="/english/translate" element={<Translate />} />
-    </Route>
-    </Routes>
+    <div className='english'>
+      <header>{RoutesConf.label || RoutesConf.name}</header>
+      <Outlet />
+    </div>
   );
 }
 
