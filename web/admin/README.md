@@ -1,37 +1,57 @@
-# Getting Started with Create React App
+# Ant Design Pro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
 
-## Available Scripts
+## Environment Prepare
 
-In the project directory, you can run:
+Install `node_modules`:
 
-### `npm start`
+```bash
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+or
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+yarn
+```
 
+## Provided Scripts
 
-### `npm run build`
+Ant Design Pro provides some useful script to help you quick start and build with web project, code style check and test.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Scripts provided in `package.json`. It's safe to modify or add additional script:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Start project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
+### Build project
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Check code style
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run lint
+```
 
+You can also use script to auto fix some lint error:
 
-# 参考文档
-- [多入口配置](https://segmentfault.com/a/1190000039752131)
+```bash
+npm run lint:fix
+```
+
+### Test code
+
+```bash
+npm test
+```
+
+## More
+
+You can view full document on our [official website](https://pro.ant.design). And welcome any feedback in our [github](https://github.com/ant-design/ant-design-pro).
