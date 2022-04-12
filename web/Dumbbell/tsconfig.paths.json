@@ -5,8 +5,8 @@
             "@root/*": [
                 "./*"
             ],
-            "@entries/*": [
-                "./entries/*"
+            "@pages/*": [
+                "./pages/*"
             ],
             "@components/*": [
                 "./components/*"
