@@ -1,5 +1,6 @@
 const CracoLessPlugin = require('craco-less');
 const CracoAlias = require('craco-alias');
+const CracoMultiplePage = require('craco-multiple-page');
 
 module.exports = {
     plugins: [
@@ -19,6 +20,23 @@ module.exports = {
               javascriptEnabled: true,
             },
           },
+        },
+      },
+      {
+        plugin: CracoMultiplePage,
+        options: {
+          pages: [
+            {
+              name: 'home',
+              template: './public/home.html',
+              entry: './src/pages/home/index.tsx',
+            },
+            {
+              name: 'chinese',
+              template: './public/chinese.html',
+              entry: './src/pages/chinese/index.tsx',
+            },
+          ],
         },
       },
     ],
