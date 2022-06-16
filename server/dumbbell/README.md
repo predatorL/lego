@@ -5,3 +5,8 @@
 ### 文档
 - flask: https://dormousehole.readthedocs.io/en/latest/
 ## 模块
+- OCR
+
+## 环境
+## 启动
+> flask run 
