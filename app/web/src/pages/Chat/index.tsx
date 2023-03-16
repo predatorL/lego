@@ -10,7 +10,7 @@ export default function Dashboard() {
   return (
     <div>
       <Tabs defaultActiveKey="1" onChange={onChange}>
-        <TabPane tab="听/说/读" key="1">
+        <TabPane tab="翻译" key="1">
           Content of Tab Pane 1
         </TabPane>
         <TabPane tab="写" key="3">
